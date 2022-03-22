@@ -11,6 +11,7 @@ enum DetailCellType: Int, CaseIterable {
     case poster = 0, headline, actors, synopsis
 }
 
+
 final class MovieDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var movie: Movie
