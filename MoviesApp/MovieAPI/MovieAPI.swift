@@ -58,18 +58,4 @@ final class MovieAPI {
         let request: URLRequest = .init(url: url)
         RequestManager.request(request, completion: completion)
     }
-    
-    func getActorsDetail(id: String, completion: @escaping ((_ movieDetail: ActorListResponse?) -> Void)) {
-
-        guard let urlComponents: URLComponents = URLComponents(string: "https://imdb-api.com/pt-br/API/Title/k_99w129a7/\(id)") else {
-            completion(nil)
-            return
-        }
-        guard let url: URL = urlComponents.url else {
-            completion(nil)
-            return
-        }
-        let request: URLRequest = .init(url: url)
-        RequestManager.request(request, completion: completion)
-    }
 }
